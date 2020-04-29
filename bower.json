@@ -1,0 +1,8 @@
+{
+    "name": "maniple-editor",
+    "private": true,
+    "dependencies": {
+        "tinymce": "^4.9.10",
+        "tinymce-langs": "https://www.tiny.cloud/docs-4x/language/tinymce4x_languages.zip"
+    }
+}

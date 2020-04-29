@@ -147,12 +147,12 @@ class ManipleEditor_Form_Element_Editor extends Zend_Form_Element_Textarea
         return $this;
     }
 
-    public function render(Zend_View_Interface $view = null)
+    public function setView(Zend_View_Interface $view = null)
     {
-        $this->getDecorators();
-        if (!$this->getDecorator(ManipleEditor_Form_Decorator_EditorHeadScripts::className)) {
-            $this->addDecorator(new ManipleEditor_Form_Decorator_EditorHeadScripts());
+        if ($view) {
+            $view->headScript()->appendFile($view->baseUrl('bower_components/tinymce/tinymce.min.js'));
+            $view->headScript()->appendFile($view->assetUrl('editor.js', 'maniple-editor'));
         }
-        return parent::render($view);
+        return parent::setView($view);
     }
 }

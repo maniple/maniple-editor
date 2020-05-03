@@ -82,11 +82,6 @@ class ManipleEditor_Filter_HtmlPurifier implements Zend_Filter_Interface
             : $value;
 
         $html = $this->getHtmlPurifier()->purify($html);
-        $html = preg_replace(
-            sprintf('#<p>(\s+|&nbsp;|%s)</p>#i', html_entity_decode('&nbsp;', ENT_COMPAT, 'UTF-8')),
-            '',
-            $html
-        );
         return $html;
     }
 }

@@ -2,10 +2,8 @@
 
 /**
  * TinyMCE rich text editor
- *
- * @method Zefram_View_Abstract getView()
  */
-class ManipleEditor_Form_Element_Editor extends Zend_Form_Element_Textarea
+class ManipleEditor_Form_Element_Editor extends Zefram_Form_Element_Textarea
 {
     protected $_tinyMce = array(
         'height'    => 140,
